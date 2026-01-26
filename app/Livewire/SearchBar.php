@@ -15,7 +15,7 @@ class SearchBar extends Component
 
     public function render()
     {
-        $this->dispatch('searched', cari: $this->search);
-        return view('livewire.search-bar', ['cari'=>$this->search]);
+        $this->dispatch('searched', cari: $this->search); 
+        return view('livewire.search-bar');
     }
 }

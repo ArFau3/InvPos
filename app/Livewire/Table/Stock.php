@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Table;
 
 use App\Models\Product;
+use App\Models\Stock as ModelsStock;
 use Livewire\Attributes\On;
 use Livewire\Component;
 
-class Table extends Component
+class Stock extends Component
 {
     public $cari;
     
@@ -19,8 +20,9 @@ class Table extends Component
 
     public function render()
     {
-        return view('livewire.table', [
+        return view('livewire.table.stock', [
             'products' => Product::where('nama', 'like', "%".$this->cari.'%')->get(),
+            'stocks' =>ModelsStock::all(),
         ]);
     }
 }

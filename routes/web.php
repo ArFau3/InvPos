@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Inv\DashboardController;
 use App\Http\Controllers\Inv\StockController;
+use App\Http\Controllers\Pos\PosController;
 use Illuminate\Support\Facades\Route;
 
 // Route::middleware(['auth', 'verified', 'role:akuntan|ketua'])->group(function () {
@@ -13,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 
     Route::controller(StockController::class)->group(function(){
         Route::get('/stock', 'index');
+    });
+
+    Route::controller(PosController::class)->group(function(){
+        Route::get('/pos', 'index');
     });
 // });

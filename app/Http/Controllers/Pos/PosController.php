@@ -1,25 +1,23 @@
 <?php
 
-namespace App\Http\Controllers\Inv;
+namespace App\Http\Controllers\Pos;
 
 use App\Http\Controllers\Controller;
-use App\Models\Product;
-use App\Models\Stock;
 use Illuminate\Http\Request;
 
-class StockController extends Controller
+class PosController extends Controller
 {
     public function index(Request $request)
     {
         $data = [
-            "title" => "stock",
+            "title" => "pos",
             // 'user' => $request->user(),
             'user' => [
                 'name' => "Nama Lengkap",
             ],
-            'judul' => 'Stock Tersedia',
+            'judul' => 'POS',
         ];
         
-        return view('inv.stock.index', $data);
+        return view('pos.index', $data);
     }
 }
